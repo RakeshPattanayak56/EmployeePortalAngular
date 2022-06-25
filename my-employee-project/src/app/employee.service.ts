@@ -10,6 +10,6 @@ export class EmployeeService {
   constructor(private httpclient: HttpClient) { }
   getemployees():Observable<any>{
     debugger
-    return this.httpclient.get("https://localhost:7097/api/Employee/getemployees")
+    return this.httpclient.get("https://employeecontrol.azurewebsites.net/api/Employee/getemployees")
   }
 }
