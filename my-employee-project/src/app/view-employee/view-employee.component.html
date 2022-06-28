@@ -5,8 +5,8 @@
       <th>User Name</th>
       <th>Login</th>
       <th>Logout</th>
-      <th>InDeskTimeIn</th>
-      <th>InDeskTimeOut</th>
+      <!-- <th>InDeskTimeIn</th>
+      <th>InDeskTimeOut</th> -->
       <th>LastUpdateTime</th>
       <th>LastUpdatedBy</th>
       <th>Edit</th>
@@ -18,8 +18,8 @@
         <td *ngIf="!dataitem.visible">{{dataitem.userName}}</td>
         <td *ngIf="!dataitem.visible">{{dataitem.login}}</td>
         <td *ngIf="!dataitem.visible">{{dataitem.logout}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeIn}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeOut}}</td>
+        <!-- <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeIn}}</td>
+        <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeOut}}</td> -->
         <td *ngIf="!dataitem.visible">{{dataitem.lastUpdateTime}}</td>
         <td *ngIf="!dataitem.visible">{{dataitem.lastUpdatedBy}}</td>
         <td *ngIf="!dataitem.visible" style="cursor: pointer;">
@@ -30,8 +30,8 @@
       <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.userName" id="field"></td>
       <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.login" id="field"></td>
       <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.logout" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeIn" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeOut" id="field"></td>
+      <!-- <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeIn" id="field"></td>
+      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeOut" id="field"></td> -->
       <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.lastUpdateTime" id="field"></td>
       <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.lastUpdatedBy" id="field"></td>
       <td *ngIf="dataitem.visible">
