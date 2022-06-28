@@ -13,7 +13,6 @@ export class ViewEmployeeComponent implements OnInit {
   constructor(private _EmployeeService: EmployeeService ){
 
     _EmployeeService.getemployees().subscribe((data)=>{
-      debugger
       this.getemployees=data
     });
   }
@@ -25,7 +24,6 @@ export class ViewEmployeeComponent implements OnInit {
      this.updateEmployeedetails(dataitem);
   }
   updateEmployeedetails(dataitem: employees){
-    debugger
     this._EmployeeService.updateEmployeedetails(dataitem).subscribe(
       () => {
         this.dataitem='';
