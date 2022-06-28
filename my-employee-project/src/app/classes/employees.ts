@@ -12,4 +12,5 @@ export class employees{
     lastUpdateTime:Time;
     lastUpdatedBy:string;
     isActive:string;
+  visible: boolean;
 }
