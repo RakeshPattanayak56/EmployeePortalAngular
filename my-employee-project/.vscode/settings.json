@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/b3fb24bc-c975-44b6-9c8e-346d8bc9fd6e/microsoft.web/sites/subscriptions/b3fb24bc-c975-44b6-9c8e-346d8bc9fd6e/resourceGroups/EmployeeControl_group-9822/providers/Microsoft.Web/sites/EmployeeControl",
-    "appService.deploySubpath": "dist\\my-employee-project"
-}
