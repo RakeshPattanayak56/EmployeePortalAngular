@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'empattendancesystem'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E33281614F3D4614BCAB6590A70446E9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_80474254AB934B7284A45464A2C969A0 }}
           package: .
