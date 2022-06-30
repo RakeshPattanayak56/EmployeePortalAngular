@@ -7,7 +7,7 @@ import { Employee } from './employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  url = 'https://localhost:7097/api';
+  url = 'https://employeecontrol.azurewebsites.net/api';
 
   constructor(private httpclient: HttpClient) { }
   getemployees(): Observable<Employee[]> {
