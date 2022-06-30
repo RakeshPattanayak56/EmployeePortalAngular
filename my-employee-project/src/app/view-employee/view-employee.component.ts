@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { employees } from '../classes/employees';
+import { Employee } from '../employee.model';
 import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'app-view-employee',
@@ -7,26 +7,30 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./view-employee.component.css']
 })
 export class ViewEmployeeComponent implements OnInit {
-
-   getemployees:any;
+  data: Employee[];
   dataitem: string;
-  constructor(private _EmployeeService: EmployeeService ){
-
-    _EmployeeService.getemployees().subscribe((data)=>{
-      this.getemployees=data
+  constructor(private employeeService: EmployeeService ){
+  }
+  ngOnInit(): void {
+    this.getAllEmployeedetails();
+   }
+  getAllEmployeedetails = () =>{
+    this.employeeService.getemployees().subscribe(
+    (response) => {
+      this.data = response;
     });
   }
-  ngOnInit(): void { }
   onEdit(data: { visible: boolean; }) {
     data.visible = true;
   }
-  onRowSubmit(dataitem: employees) {
+  onRowSubmit(dataitem: any) {
      this.updateEmployeedetails(dataitem);
   }
-  updateEmployeedetails(dataitem: employees){
-    this._EmployeeService.updateEmployeedetails(dataitem).subscribe(
+  updateEmployeedetails(dataitem: Employee){
+    this.employeeService.updateEmployeedetails(dataitem).subscribe(
       () => {
         this.dataitem='';
+        this.getAllEmployeedetails();
         alert("update Succefully");  
       }
     );

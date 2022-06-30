@@ -1,3 +1,7 @@
+<div class="date">
+  <input type="date" placeholder="From Date" >&nbsp;
+  <button class="filter">Filter</button>
+</div>
 <table class="table table-hover">
     <thead>
       <th>Id</th>
@@ -12,30 +16,30 @@
       <th>Edit</th>
     </thead>
     <tbody>
-      <tr *ngFor="let dataitem of getemployees ">
-        <td *ngIf="!dataitem.visible">{{dataitem.id}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.userId}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.userName}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.login}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.logout}}</td>
-        <!-- <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeIn}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.inDeskTimeOut}}</td> -->
-        <td *ngIf="!dataitem.visible">{{dataitem.lastUpdateTime}}</td>
-        <td *ngIf="!dataitem.visible">{{dataitem.lastUpdatedBy}}</td>
-        <td *ngIf="!dataitem.visible" style="cursor: pointer;">
-          <button type="button" class="rowbutton" (click)="onEdit(dataitem)">Edit</button>   
+      <tr *ngFor="let item of data ">
+        <td *ngIf="!item.visible">{{item.id}}</td>
+        <td *ngIf="!item.visible">{{item.userId}}</td>
+        <td *ngIf="!item.visible">{{item.userName}}</td>
+        <td *ngIf="!item.visible">{{item.login}}</td>
+        <td *ngIf="!item.visible">{{item.logout}}</td>
+        <!-- <td *ngIf="!item.visible">{{item.inDeskTimeIn}}</td>
+        <td *ngIf="!item.visible">{{item.inDeskTimeOut}}</td> -->
+        <td *ngIf="!item.visible">{{item.lastUpdateTime}}</td>
+        <td *ngIf="!item.visible">{{item.lastUpdatedBy}}</td>
+        <td *ngIf="!item.visible" style="cursor: pointer;">
+          <button type="button" class="rowbutton" (click)="onEdit(item)">Edit</button>   
       </td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.id" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.userId" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.userName" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.login" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.logout" id="field"></td>
-      <!-- <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeIn" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.inDeskTimeOut" id="field"></td> -->
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.lastUpdateTime" id="field"></td>
-      <td *ngIf="dataitem.visible"><input [(ngModel)]="dataitem.lastUpdatedBy" id="field"></td>
-      <td *ngIf="dataitem.visible">
-        <button type="button" class="rowbutton" (click)="onRowSubmit(dataitem)">submit</button>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.id" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.userId" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.userName" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.login" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.logout" id="field"></td>
+      <!-- <td *ngIf="item.visible"><input [(ngModel)]="item.inDeskTimeIn" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.inDeskTimeOut" id="field"></td> -->
+      <td *ngIf="item.visible"><input [(ngModel)]="item.lastUpdateTime" id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.lastUpdatedBy" id="field"></td>
+      <td *ngIf="item.visible">
+        <button type="button" class="rowbutton" (click)="onRowSubmit(item)">submit</button>
       </td>
       </tr>
     </tbody>

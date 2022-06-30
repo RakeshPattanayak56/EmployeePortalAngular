@@ -10,18 +10,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import{MatSidenavModule} from '@angular/material/sidenav';
 import{MatListModule} from '@angular/material/list';
-import { EmplyeeComponent } from './emplyee/emplyee.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
+import { EmployeeComponent } from './employee/employee.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmplyeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

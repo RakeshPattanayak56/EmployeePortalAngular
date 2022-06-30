@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { EmployeeService } from './employee.service';
-
-import { employees } from './classes/employees';
 
 @Component({
   selector: 'app-root',
