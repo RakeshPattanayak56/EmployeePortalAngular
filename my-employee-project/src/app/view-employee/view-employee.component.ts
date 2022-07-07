@@ -9,6 +9,8 @@ import { EmployeeService } from '../employee.service';
 export class ViewEmployeeComponent implements OnInit {
   data: Employee[];
   dataitem: string;
+  searchValue:any;
+  filterValue:string;
   constructor(private employeeService: EmployeeService ){
   }
   ngOnInit(): void {
@@ -18,6 +20,7 @@ export class ViewEmployeeComponent implements OnInit {
     this.employeeService.getemployees().subscribe(
     (response) => {
       this.data = response;
+      console.log(this.data);
     });
   }
   onEdit(data: { visible: boolean; }) {
@@ -34,6 +37,9 @@ export class ViewEmployeeComponent implements OnInit {
         alert("update Succefully");  
       }
     );
+  }
+  applyFilter(filterValue:any) {
+    this.data.filter= filterValue.trim().toLowerCase();
   }
   
 }

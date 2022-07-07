@@ -8,8 +8,6 @@ import { AddEmployeeService } from '../add-employee.service';
 })
 export class EmployeeComponent implements OnInit {
   data: any;
- 
-
   constructor(private addEmployeeService:AddEmployeeService ) { }
 
   ngOnInit(): void {

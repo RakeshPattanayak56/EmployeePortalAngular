@@ -15,13 +15,15 @@ import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
 import { EmployeeComponent } from './employee/employee.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewEmployeeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

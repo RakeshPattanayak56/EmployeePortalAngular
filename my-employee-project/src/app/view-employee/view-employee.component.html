@@ -1,7 +1,18 @@
-<div class="date">
-  <input type="date" placeholder="From Date" >&nbsp;
-  <button class="filter">Filter</button>
+<div class="search">
+  <tr>
+    <td style="border: none;">
+      <div class="searchbox">
+        <input type="text" name="filter" (keyup)="applyFilter($event.target.value)"   id="search" placeholder="Filter">
+      </div>
+    </td>
+    <td style="border: none;">
+      <div>
+        <button class="btn btn-primary" name="loaded" >Loaded</button>
+      </div>
+    </td>
+  </tr>
 </div>
+<br>
 <table class="table table-hover">
     <thead>
       <th>Id</th>
@@ -14,6 +25,7 @@
       <th>LastUpdateTime</th>
       <th>LastUpdatedBy</th>
       <th>Edit</th>
+      
     </thead>
     <tbody>
       <tr *ngFor="let item of data ">

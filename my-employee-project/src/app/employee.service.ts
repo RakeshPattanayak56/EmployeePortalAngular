@@ -7,7 +7,7 @@ import { Employee } from './employee.model';
   providedIn: 'root'
 })
 export class EmployeeService {
-  url = 'https://employeecontrol.azurewebsites.net/api';
+  url = 'https://localhost:7097/api';
 
   constructor(private httpclient: HttpClient) { }
   getemployees(): Observable<Employee[]> {
@@ -15,6 +15,6 @@ export class EmployeeService {
   }
   updateEmployeedetails(employeedetails: Employee): Observable<Employee> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-    return this.httpclient.post<Employee>(this.url + '/Employee/saveemployee',employeedetails, httpOptions);
+    return this.httpclient.post<Employee>(this.url + '/AddEmployee/addemployee',employeedetails, httpOptions);
   }
 }
