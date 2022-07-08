@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
 import { EmployeeComponent } from './employee/employee.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import{MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppComponent,
     ViewEmployeeComponent,
     EmployeeComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatListModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
