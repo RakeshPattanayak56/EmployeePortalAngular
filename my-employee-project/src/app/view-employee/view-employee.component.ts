@@ -7,10 +7,11 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./view-employee.component.css']
 })
 export class ViewEmployeeComponent implements OnInit {
-  data: Employee[];
+  data: Employee[]=[];
   dataitem: string;
-  searchValue:any;
   filterValue:string;
+  userName:string;
+
   constructor(private employeeService: EmployeeService ){
   }
   ngOnInit(): void {
@@ -20,7 +21,6 @@ export class ViewEmployeeComponent implements OnInit {
     this.employeeService.getemployees().subscribe(
     (response) => {
       this.data = response;
-      console.log(this.data);
     });
   }
   onEdit(data: { visible: boolean; }) {
@@ -38,8 +38,15 @@ export class ViewEmployeeComponent implements OnInit {
       }
     );
   }
-  applyFilter(filterValue:any) {
-    this.data.filter= filterValue.trim().toLowerCase();
+  Search(){
+    if(this.userName!=""){
+
+    }else if (this.userName == ""){
+      this.ngOnInit();
+    }
+    this.data = this.data.filter(res=>{
+      return res.userName.toLowerCase().match(this.userName.toLowerCase());
+    });
   }
   
 }

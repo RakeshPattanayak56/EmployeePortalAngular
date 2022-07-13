@@ -10,7 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import{MatSidenavModule} from '@angular/material/sidenav';
 import{MatListModule} from '@angular/material/list';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './employee.service';
@@ -18,6 +18,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import{MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { FormsModule } from '@angular/forms';
+import { ClassComponent } from './class/class.component';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     ViewEmployeeComponent,
     EmployeeComponent,
     WelcomeComponent,
-    PopUpComponent
+    PopUpComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule,
