@@ -20,6 +20,7 @@ import{MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { FormsModule } from '@angular/forms';
 import { ClassComponent } from './class/class.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ClassComponent } from './class/class.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

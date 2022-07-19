@@ -10,7 +10,8 @@ export class ViewEmployeeComponent implements OnInit {
   data: Employee[]=[];
   dataitem: string;
   filterValue:string;
-  userName:string;
+  userName: string;
+  login: string;
 
   constructor(private employeeService: EmployeeService ){
   }
@@ -42,10 +43,18 @@ export class ViewEmployeeComponent implements OnInit {
     if(this.userName!=""){
 
     }else if (this.userName == ""){
-      this.ngOnInit();
+      this.ngOnInit()
     }
     this.data = this.data.filter(res=>{
       return res.userName.toLowerCase().match(this.userName.toLowerCase());
+    });
+  }
+  Filter(){
+    if(this.login == ""){
+      this.ngOnInit()
+    }
+    this.data = this.data.filter(res=>{
+      return (new Date(res.login)).toISOString().split('T')[0].match(this.login);
     });
   }
   

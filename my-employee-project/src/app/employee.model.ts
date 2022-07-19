@@ -1,16 +1,14 @@
-import { Time } from "@angular/common";
-
 export class Employee {
-    id:number;
-    userId:number;
-    userName:string;
-    login:string;
-    logout:string;
-    inDeskTimeIn:string;
-    inDeskTimeOut:string;
-    lastUpdateTime:string;
-    lastUpdatedBy:string;
-    isActive:string;
+  id:number;
+  userId:number;
+  userName:string;
+  login:number;
+  logout:number;
+  inDeskTimeIn:number;
+  inDeskTimeOut:number;
+  lastUpdateTime:number;
+  lastUpdatedBy:string;
+  isActive:string;
   visible: boolean;
   Login: unknown;
 }

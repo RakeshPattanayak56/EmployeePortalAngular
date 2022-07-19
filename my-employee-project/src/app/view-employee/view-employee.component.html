@@ -1,21 +1,8 @@
-<!-- <div class="search">
-  <tr>
-    <td style="border: none;">
-      <div class="searchbox">
-        <input type="text" name="filter" (keyup)="applyFilter($event)"   id="search" placeholder="Filter">
-      </div>
-    </td>
-    <td style="border: none;">
-      <div>
-        <button class="btn btn-primary" name="loaded" >Loaded</button>
-      </div>
-    </td>
-  </tr>
-</div> -->
 <br>
 <label >Search:</label>
-<input type="text" [(ngModel)]="userName" (input)="Search()">
-{{userName}}
+<input type="text"  [(ngModel)]="userName" (input)="Search()">
+<label >Date Search:</label>
+<input type="date" [(ngModel)]="login" (change)="Filter()">
 <br>
 <br>
 <table class="table table-hover">
@@ -37,11 +24,11 @@
         <td *ngIf="!item.visible">{{item.id}}</td>
         <td *ngIf="!item.visible">{{item.userId}}</td>
         <td *ngIf="!item.visible">{{item.userName}}</td>
-        <td *ngIf="!item.visible">{{item.login | date:'yyyy-MM-dd'}}</td>
-        <td *ngIf="!item.visible">{{item.logout | date:'yyyy-MM-dd'}}</td>
+        <td *ngIf="!item.visible">{{item.login  | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+        <td *ngIf="!item.visible">{{item.logout  | date:'yyyy-MM-dd HH:mm:ss'}}</td>
         <!-- <td *ngIf="!item.visible">{{item.inDeskTimeIn}}</td>
         <td *ngIf="!item.visible">{{item.inDeskTimeOut}}</td> -->
-        <td *ngIf="!item.visible">{{item.lastUpdateTime | date:'yyyy-MM-dd'}}</td>
+        <td *ngIf="!item.visible">{{item.lastUpdateTime  | date:'yyyy-MM-dd HH:mm:ss'}}</td>
         <td *ngIf="!item.visible">{{item.lastUpdatedBy}}</td>
         <td *ngIf="!item.visible" style="cursor: pointer;">
           <button type="button" class="rowbutton" (click)="onEdit(item)">Edit</button>   
@@ -49,7 +36,7 @@
       <td *ngIf="item.visible"><input [(ngModel)]="item.id" id="field"></td>
       <td *ngIf="item.visible"><input [(ngModel)]="item.userId" id="field"></td>
       <td *ngIf="item.visible"><input [(ngModel)]="item.userName" id="field"></td>
-      <td *ngIf="item.visible"><input [(ngModel)]="item.login " id="field"></td>
+      <td *ngIf="item.visible"><input [(ngModel)]="item.login" id="field"></td>
       <td *ngIf="item.visible"><input [(ngModel)]="item.logout" id="field"></td>
       <!-- <td *ngIf="item.visible"><input [(ngModel)]="item.inDeskTimeIn" id="field"></td>
       <td *ngIf="item.visible"><input [(ngModel)]="item.inDeskTimeOut" id="field"></td> -->

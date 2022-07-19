@@ -1,11 +1,15 @@
 <h2>Add Email</h2>
 <label >Email</label>
 <br>
-<input  formControlName="email"  required  type="text" class="form-control" emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="email">
+<input  required  type="email" [(ngModel)]="txtEmail" class="form-control" emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  name="email">
+<br>
+<br>
+<label >Date</label>
+<br>
+<input  required  type="date" [(ngModel)]="txtDate" class="form-control" name="date">
 <br>
 <br>
 <div>
-    <button value="save" 
-    [style.color]="'black'">Save</button>&nbsp;
-    <button value="cancel">Cancel</button>
+    <button value="send" 
+    [style.color]="'black'"(click)="AddNewData()">Send</button>&nbsp;
 </div>
